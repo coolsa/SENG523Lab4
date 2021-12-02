@@ -12,8 +12,9 @@ public class SCB {
 	// Booleans for states.
 	private boolean pinValid, withdrawing, cardInserted, cancelledTransaction, sysShutDown, sysFailed, verifiedDispense;
 
+    public static final SCB INSTANCE = new SCB(250, 100, 50, 25, 10, 250*5+100*10+50*20+25*50+10*100, 0, false, false, false, false, false, false, false);
+
 	//To-Do: SCB states. 
-	
 	// Constructor (sorry for large) 
 	// Could also change default constructor to follow behavior of Lab4 system initialization. 
 	public SCB(int amountFive, int amountTen, int amountTwenty, int amountFifty, int amountHundred,
