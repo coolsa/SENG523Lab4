@@ -70,5 +70,9 @@ public class BillStorage {
 		public void setStorageState(boolean storageState) {
 			this.storageState = storageState;
 		}
+		
+		public boolean verifyBillAvailability(String billType) {
+			return false;
+		}
 	
 }
