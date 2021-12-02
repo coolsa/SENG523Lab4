@@ -10,9 +10,11 @@ public class GUI {
 	
 	BankCard bankCard;
 	//CardDatabase cardDatabase;
+	CardDatabase cardDB;
 	
 	
 	public GUI() {
+		
 	}
 	
 	public void runGUI() {

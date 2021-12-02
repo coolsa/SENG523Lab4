@@ -11,7 +11,9 @@ public class SCB {
 	
 	// Booleans for states.
 	private boolean pinValid, withdrawing, cardInserted, cancelledTransaction, sysShutDown, sysFailed, verifiedDispense;
-
+    public static final SCB INSTANCE = new SCB(250, 100, 50, 25, 10, 250*5+100*10+50*20+25*50+10*100, 0, 
+    		false, false, false, false, false, false, false);
+	
 	//To-Do: SCB states. 
 	
 	// Constructor (sorry for large) 
