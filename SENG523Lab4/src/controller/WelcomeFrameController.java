@@ -33,13 +33,15 @@ public class WelcomeFrameController {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// System.out.println(welcomeScreen.getCardNumber().getText());
+
 				int card = Integer.parseInt(welcomeScreen.getCardNumber().getText());
 				BankCard bc = cardDB.getCard(card);
 				if (bc.getCardNumber() == 0000 && bc.getBalance() == 0000 && bc.isAccountStatus() == false) {
 					showMessageDialog(null, "The card is not valid");
 					welcomeScreen.reset();
 				} else {
-					EnterPinScreen enterPinScreen = new EnterPinScreen();
+					welcomeScreen.dispose();
+					EnterPinScreen enterPinScreen = new EnterPinScreen(bc);
 					enterPinScreen.displayFrame();
 				}
 			}
