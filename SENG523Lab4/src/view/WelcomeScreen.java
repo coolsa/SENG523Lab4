@@ -21,7 +21,7 @@ import model.SCB;
 public class WelcomeScreen {
 	private SCB scb;
 	private CardDatabase cardDB;
-	private JButton insertCardButton = new JButton("InsertCard");
+	private JButton insertCardButton = new JButton("Insert Card");
 	private JButton instruction = new JButton("Instruction");
 	private JTextField cardNumber = new JTextField("");
 	JFrame frame;
@@ -88,6 +88,10 @@ public class WelcomeScreen {
 		frame.dispose();
 		(new WelcomeScreen(scb, cardDB)).displayFrame();
 
+	}
+
+	public void dispose() {
+		frame.dispose();
 	}
 	// Comment out when testing is done for this.
 	/*

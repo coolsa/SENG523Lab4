@@ -18,7 +18,17 @@ public class ATMProject {
 
 	public static void main(String[] Args) {
 		System.out.println("Starting up.... ");
+		ATMProject atmProject = new ATMProject();
+		atmProject.buildDummyCardDatabase();
+		atmProject.systemInitialization();
 
+	}
+
+	public static void terminate() {
+		System.exit(0);
+	}
+
+	public static void start() {
 		// Doing setup:
 		ATMProject atmProject = new ATMProject();
 		atmProject.buildDummyCardDatabase();
