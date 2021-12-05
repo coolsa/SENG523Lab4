@@ -28,7 +28,7 @@ public class Check_Balance_Controller {
 	// Action Listener Events to be added here.
 	public void runController() {
 
-    checkBalance.setBalance(Double.toString(bc.getBalance()));
+		checkBalance.setBalance(Double.toString(bc.getBalance()));
 		checkBalance.getWithdrawButton().addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -38,7 +38,6 @@ public class Check_Balance_Controller {
 			}
 		});
 
-	
 		checkBalance.getDepositButton().addActionListener(new ActionListener() {
 
 			@Override
