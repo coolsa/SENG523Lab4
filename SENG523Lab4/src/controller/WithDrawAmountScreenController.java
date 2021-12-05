@@ -5,6 +5,12 @@ import java.awt.event.ActionListener;
 
 import view.WithDrawAmountScreen;
 
+import model.BankCard;
+import model.BillDisburse;
+
+import static javax.swing.JOptionPane.showMessageDialog;
+import static javax.swing.JOptionPane.showInputDialog;;
+
 // Remember to do checks for verify balance as per Lab 3. 
 public class WithDrawAmountScreenController {
 
@@ -14,6 +20,10 @@ public class WithDrawAmountScreenController {
 		this.withdrawAmountScreen = withdrawAmountScreen;
 	}
 	
+	public void reset() {
+		withdrawAmountScreen.dispose();
+		ATMProject.start();
+	}
 	public void runController() {
 		
 		// Enter 
@@ -23,6 +33,15 @@ public class WithDrawAmountScreenController {
 				
 				// Todo: Logic and checking if funds available. If not, display error screen.
 				System.out.println(withdrawAmountScreen.getWithdrawField().getText());
+				double withdrawamount = Integer.parseInt(withdrawAmountScreen.getWithdrawField().getText());
+				if (withdrawamount <= withdrawAmountScreen.getAmountInAccount()) {
+					
+					//code that dispenses cash should go here 
+				} else {
+					showMessageDialog(null,
+							"Not enough funds for withdrawel, Please restart transaction.");
+					reset();
+				}
 			}
 		});
 		
