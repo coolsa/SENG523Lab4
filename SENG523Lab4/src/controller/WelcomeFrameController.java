@@ -47,7 +47,16 @@ public class WelcomeFrameController {
 			}
 
 		});
+		welcomeScreen.getcancelButton().addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// System.out.println(welcomeScreen.getCardNumber().getText());
+
+					welcomeScreen.dispose();
+			}
+
+		});
 	}
 
 }
