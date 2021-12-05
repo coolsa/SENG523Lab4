@@ -22,7 +22,7 @@ public class WelcomeScreen {
 	private SCB scb;
 	private CardDatabase cardDB;
 	private JButton insertCardButton = new JButton("Insert Card");
-	private JButton instruction = new JButton("Cancel");
+	private JButton Cancel = new JButton("Cancel");
 	private JTextField cardNumber = new JTextField("");
 	JFrame frame;
 
