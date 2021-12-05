@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import model.BankCard;
+
 import controller.EnterPinScreenController;
 import controller.WithDrawAmountScreenController;
 
@@ -19,9 +21,13 @@ public class WithDrawAmountScreen {
 	private JButton enterButton = new JButton("Enter");
 	private JButton cancelButton = new JButton("Cancel");
 	private JTextField withdrawField = new JTextField("Enter amount to withdraw.");
+	private BankCard card;
 	private JTextField amountInAccount; // Set this to the card passed in's amount. 
 	JFrame frame;
 	
+	public WithDrawAmountScreen(BankCard bc) {
+		this.card = bc;
+	}
 	public JButton getEnterButton() {
 		return enterButton;
 	}
@@ -34,8 +40,8 @@ public class WithDrawAmountScreen {
 		return withdrawField;
 	}
 	
-	public JTextField getAmountInAccount() {
-		return amountInAccount;
+	public double getAmountInAccount() {
+		return card.getBalance();
 	}
 	public void setAmountInAccount(JTextField amountInAccount) {
 		this.amountInAccount = amountInAccount;
