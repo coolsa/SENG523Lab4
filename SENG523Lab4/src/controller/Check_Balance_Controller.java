@@ -32,7 +32,7 @@ public class Check_Balance_Controller {
 		checkBalance.getWithdrawButton().addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				WithDrawAmountScreen withdrawamount = new WithDrawAmountScreen();
+				WithDrawAmountScreen withdrawamount = new WithDrawAmountScreen(bc);
 				withdrawamount.displayFrame();
 				checkBalance.dispose();
 			}
