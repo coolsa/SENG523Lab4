@@ -53,6 +53,7 @@ public class Check_Balance {
 		// balance.setText(Double.toString(bc.getBalance()));
 		textfield.add(new JLabel("Balance: "));
 		textfield.add(balance);
+		balance.setEditable(false);
 
 		frame.add("Center", textfield);
 
