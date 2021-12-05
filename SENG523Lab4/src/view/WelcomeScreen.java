@@ -40,7 +40,7 @@ public class WelcomeScreen {
 		frame.setLocationRelativeTo(null); // centers frame
 
 		JLabel welcomeMessage = new JLabel(
-				"Welcome! Please Insert a card to begin. Click on the instruction button for more information",
+				"Welcome! Please Insert a card to begin.",
 				JLabel.CENTER);
 		welcomeMessage.setFont(new Font(welcomeMessage.getFont().toString(), Font.BOLD, 30));
 
