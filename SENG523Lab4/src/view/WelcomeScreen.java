@@ -22,7 +22,7 @@ public class WelcomeScreen {
 	private SCB scb;
 	private CardDatabase cardDB;
 	private JButton insertCardButton = new JButton("Insert Card");
-	private JButton instruction = new JButton("Instruction");
+	private JButton Cancel = new JButton("Cancel");
 	private JTextField cardNumber = new JTextField("");
 	JFrame frame;
 
@@ -55,7 +55,7 @@ public class WelcomeScreen {
 
 		JPanel buttons = new JPanel(new FlowLayout());
 		buttons.add(insertCardButton);
-		buttons.add(instruction);
+		buttons.add(Cancel);
 		frame.add("South", buttons);
 
 		// frame.pack();
@@ -72,6 +72,11 @@ public class WelcomeScreen {
 		return insertCardButton;
 	}
 
+	public JButton getcancelButton() {
+		return Cancel;
+	}
+
+	
 	public JTextField getCardNumber() {
 		return cardNumber;
 	}
