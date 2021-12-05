@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import view.Check_Balance;
 import view.EnterPinScreen;
 import view.WelcomeScreen;
 import view.WithDrawAmountScreen;
@@ -46,8 +47,8 @@ public class EnterPinScreenController {
 
 				}
 				if (cardPin == bc.getPinNumber()) {
-					WithDrawAmountScreen withdrawScreen = new WithDrawAmountScreen();
-					withdrawScreen.displayFrame();
+					Check_Balance checkBalance = new Check_Balance(bc);
+					checkBalance.displayFrame();
 					enterPinScreen.dispose();
 				} else {
 					showMessageDialog(null,
