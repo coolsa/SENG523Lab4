@@ -35,7 +35,7 @@ public class WithDrawAmountScreenController {
 			public void actionPerformed(ActionEvent e) {
 
 				// Todo: Logic and checking if funds available. If not, display error screen.
-				System.out.println(withdrawAmountScreen.getWithdrawField().getText());
+
 				double withdrawamount = Integer.parseInt(withdrawAmountScreen.getWithdrawField().getText());
 
 				if (withdrawamount <= withdrawAmountScreen.getAmountInAccount()) {

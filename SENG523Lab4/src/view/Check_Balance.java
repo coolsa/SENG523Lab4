@@ -22,6 +22,7 @@ public class Check_Balance {
 	private BankCard bc;
 	private JButton withdraw = new JButton("Withdraw");
 	private JButton deposit = new JButton("Deposit");
+	private JButton cancel = new JButton("Cancel");
 	private JTextField balance = new JTextField("");
 	JFrame frame;
 
@@ -60,6 +61,7 @@ public class Check_Balance {
 		JPanel buttons = new JPanel(new FlowLayout());
 		buttons.add(withdraw);
 		buttons.add(deposit);
+		buttons.add(cancel);
 		frame.add("South", buttons);
 
 		// frame.pack();
@@ -85,6 +87,9 @@ public class Check_Balance {
 		return deposit;
 	}
 
+	public JButton getCancelButton() {
+		return cancel;
+	}
 	// public void reset() {
 	// frame.dispose();
 
