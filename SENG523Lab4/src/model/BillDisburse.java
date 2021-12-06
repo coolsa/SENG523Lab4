@@ -71,7 +71,7 @@ public class BillDisburse {
 			}
 			else break;
 			JFrame frame;
-			frame = new JFrame("ATM Welcome!");
+			frame = new JFrame("Physical Bills");
 			frame.setLayout(new BorderLayout());
 			frame.setSize(Toolkit.getDefaultToolkit().getScreenSize().width/2, Toolkit.getDefaultToolkit().getScreenSize().height/2);
 			frame.setLocationRelativeTo(null); //centers frame 

@@ -5,7 +5,7 @@ public class BillStorage {
 	private double amountTotal;
 	private boolean storageState;
 
-	public static BillStorage INSTANCE;
+	public static final BillStorage INSTANCE = new BillStorage(100, 100, 100, 100, 100, 18500, true);
 	
 	public BillStorage(int five, int ten, int twenty, int fifty, int hundred, double amountTotal,
 			boolean storageState) {
@@ -85,6 +85,7 @@ public class BillStorage {
 		} else if (SCB.INSTANCE.getDispenseAmount() == 100) {
 			if (SCB.INSTANCE.getAmountHundred() > 1) { // Available
 				SCB.INSTANCE.setVerifiedDispense(true);
+				
 			} else { // Unavailable
 				SCB.INSTANCE.setVerifiedDispense(false);
 			}
