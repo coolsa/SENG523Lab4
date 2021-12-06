@@ -41,7 +41,7 @@ public class ATMProject {
 		// gui.runGUI)
 
 		scb = SCB.INSTANCE; // set the scb to the only instance of the SCB (singleton)
-		billStorage = new BillStorage(100, 100, 100, 100, 100, 18500, true);
+		billStorage.INSTANCE = new BillStorage(100, 100, 100, 100, 100, 18500, true);
 
 		// To-Do: clock.
 

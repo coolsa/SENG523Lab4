@@ -41,38 +41,8 @@ public class WithDrawAmountScreenController {
 				if (withdrawamount <= withdrawAmountScreen.getAmountInAccount()) {
 					double newBalance = withdrawAmountScreen.getAmountInAccount() - withdrawamount;
 					withdrawAmountScreen.getCard().setBalance(newBalance);
-					while (withdrawamount > 0) {
-						if (withdrawamount >= 100) {
-							showMessageDialog(null, "$100 dollars succesfully provided", "Payment",
-									JOptionPane.WARNING_MESSAGE);
-							withdrawamount = withdrawamount - 100;
-							continue;
-						}
-						if (withdrawamount >= 50) {
-							showMessageDialog(null, "$50 dollars succesfully provided", "Payment",
-									JOptionPane.WARNING_MESSAGE);
-							withdrawamount = withdrawamount - 50;
-							continue;
-						}
-						if (withdrawamount >= 20) {
-							showMessageDialog(null, "$20 dollars succesfully provided", "Payment",
-									JOptionPane.WARNING_MESSAGE);
-							withdrawamount = withdrawamount - 20;
-							continue;
-						}
-						if (withdrawamount >= 10) {
-							showMessageDialog(null, "$10 dollars succesfully provided", "Payment",
-									JOptionPane.WARNING_MESSAGE);
-							withdrawamount = withdrawamount - 10;
-							continue;
-						}
-						if (withdrawamount >= 5) {
-							showMessageDialog(null, "$5 dollars succesfully provided", "Payment",
-									JOptionPane.WARNING_MESSAGE);
-							withdrawamount = withdrawamount - 5;
-							continue;
-						}
-					}
+					BillDisburse.INSTANCE.DisburseBills(withdrawamount);
+					BillDisburse.INSTANCE.BillDispense();
 					showMessageDialog(null, "Transaction was successful.");
 					withdrawAmountScreen.dispose();
 					Check_Balance checkBalance = new Check_Balance(withdrawAmountScreen.getCard());
