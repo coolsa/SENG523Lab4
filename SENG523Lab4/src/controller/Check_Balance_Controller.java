@@ -25,6 +25,11 @@ public class Check_Balance_Controller {
 		this.bc = checkBalance.getCard();
 	}
 
+	public void reset() {
+		checkBalance.dispose();
+		ATMProject.start();
+	}
+
 	// Action Listener Events to be added here.
 	public void runController() {
 
@@ -38,6 +43,12 @@ public class Check_Balance_Controller {
 			}
 		});
 
+		checkBalance.getCancelButton().addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				reset();
+			}
+		});
 		checkBalance.getDepositButton().addActionListener(new ActionListener() {
 
 			@Override
